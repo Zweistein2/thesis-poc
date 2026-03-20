@@ -2,7 +2,7 @@
 
 Dieses Repository ist ein **Proof of Concept** zu dem in meiner Bachelorarbeit entwickelten theoretischen Ansatz, Steamworks in Kotlin über die Java Foreign Function & Memory API (FFM) anzubinden.
 
-Der Schwerpunkt liegt auf dem Modul `ffmlibrary`: einem KSP-basierten Generator, der aus annotierten Spezifikationen konkrete FFM-Bindings erzeugt.
+Der Schwerpunkt liegt auf dem Modul `ffmlibrary`: einem selbst entwickelten KSP-basierten Generator, der aus annotierten Spezifikationen konkrete FFM-Bindings erzeugt.
 
 Die Bachelorarbeit ist hier zu finden: [Repository](https://github.com/Zweistein2/thesis) / [PDF](https://github.com/Zweistein2/thesis/blob/master/out/thesis.pdf).
 
@@ -13,7 +13,7 @@ Ebenso sollte erprobt werden, ob sich mit diesem Ansatz die bisherige Notwendigk
 
 Dieser PoC soll zudem aufzeigen, dass sich der in der Bachelorarbeit beschriebene Ansatz nicht nur praktisch umsetzen lässt, sondern auch im Vergleich zu einem etablierten Wrapper (steamworks4j) in Bezug auf Ergonomie und Performance konkurrenzfähig ist.
 
-Der PoC vergleicht zwei Zugriffsstrategien auf Steamworks:
+Der PoC vergleicht daher zwei Zugriffsstrategien auf Steamworks:
 
 - **FFM + Codegenerierung** über `poc/steamworksFFM`
 - **steamworks4j Wrapper** über `poc/steamworks4j`
@@ -23,9 +23,9 @@ Damit werden Umsetzbarkeit, Ergonomie und Laufzeitverhalten des in der Arbeit be
 ## Projektstruktur
 
 - `ffmlibrary`  
-  KSP-Processor für die Generierung von FFM-Implementierungen aus Annotationen.
+  Der entwickelte KSP-Processor für die Generierung von FFM-Implementierungen aus Annotationen.
 - `poc/steamworksFFM`  
-  PoC-Modul, das den `ffmlibrary`-Processor für die Generierung der Bindings verwendet.
+  Das PoC-Modul, das den `ffmlibrary`-Processor für die Generierung der Bindings verwendet.
 - `poc/steamworks4j`  
   Vergleichsmodul auf Basis von `steamworks4j`.
 
